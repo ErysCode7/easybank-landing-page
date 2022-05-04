@@ -1,0 +1,194 @@
+.hero {
+    background: $very-light-gray;
+    position: relative;
+    top: 70px;
+    min-height: 280px;
+    margin-bottom: 25rem;
+
+    @include min-width(mobile) {
+        min-height: 350px;
+    }
+
+    @include min-width(tablet) {
+        min-height: 500px;
+    }
+
+    
+
+    @include min-width(laptop) {
+        position: static;
+        display: flex;
+        align-items: center;
+        min-height: 656px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+  
+    &__container {
+        position: relative;
+        min-height: 280px;
+        width: 100%;
+
+        @include min-width(laptop) {
+            width: 100%;
+            min-height: 656px;   
+        }
+      
+    }
+
+    &__text {
+        position: absolute;
+        top: 280px;
+        text-align: center;
+        margin-top: 1rem;
+
+        @include min-width(mobile) {
+            margin-top: 7rem;
+        }
+
+        @include min-width(tablet) {
+            margin-top: 15rem;
+            min-height: 500px;
+        }
+        
+        @include min-width(laptop) {
+            min-height: auto;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            width: 30%;
+            text-align: left;
+            margin-top: 0;
+        } 
+        
+        > h1 {
+            color: hsl(227, 5%, 33%);
+            font-weight: 400;
+            font-size: 2.5rem;
+
+            @include min-width(laptop) {
+                font-size: 3.5rem;  
+              
+            }
+        }
+
+        > p {
+            line-height: 1.4;
+            color: $grayish-blue;
+            margin-bottom: 1.5rem;
+
+            @include min-width(laptop) {
+                line-height: 1.3;
+                width: 92%;
+            }
+            
+        }
+    }
+    
+    //images
+    &__image {
+        min-height: 280px;
+        width: 100%;
+        top: 0;
+        position: absolute;
+        background-image: url("../../assets/images/bg-intro-mobile.svg"); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include min-width(mobile) {
+            min-height: 350px;
+        }
+
+        @include min-width(tablet) {
+            min-height: 500px;
+        }
+
+        @include min-width(laptop) {
+            background-image: none;
+            position: absolute;
+            right: -45vw;
+            height: 18%;
+            width: 100%;
+            top: -160px;
+        }
+
+        > .hero__showcase { 
+            object-fit: cover; 
+            position: absolute;
+            top: -15%;
+            right: 15%;
+            width: 85%;
+        }    
+    }
+
+    //images
+    &__main {
+        min-height: 280px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        // top: -120px;
+       
+
+        @include min-width(laptop) {
+           
+        }
+          
+
+        .hero__main-img {
+            height: 143%;
+            object-fit: cover;
+            position: absolute;
+            width: 90%;
+            left: 50%;
+            top: -120px;
+            transform: translateX(-50%);       
+
+            @media(min-width: 420px) {
+                width: 80%;
+            }
+
+            @media(min-width: 500px) {
+                width: 70%;
+            }
+
+            @include min-width(mobile) {
+                height: 170%;  
+            }
+    
+            @include min-width(tablet) {
+                top: -220px;
+                height: 250%;
+            }
+
+            @include min-width(laptop) {
+                height: auto;
+                transform: none;
+                left: auto;
+                position: absolute;
+                right: -9vw;
+                top: -45px;
+                width: 49%;
+            }
+
+            @media(min-width: 1600px) {
+                right: 0;
+                top: -70px;
+                width: 40%;
+            }
+
+            @media(min-width: 2000px) {
+                right: 0;
+                top: -70px;
+                width: 30%;
+            }
+
+            @media(min-width: 3000px) {
+                width: 20%;
+            }
+        }  
+    }
+}

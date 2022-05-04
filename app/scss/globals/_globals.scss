@@ -1,0 +1,82 @@
+//defaults
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+    @include min-width(laptop) {
+        overflow-x: hidden;
+    }
+}
+
+body.open-nav {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a, a::before, a::after {
+    text-decoration: none;
+}
+
+//flexbox
+.flex {
+    display: flex;
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sb- {
+        justify-content: space-between;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
+}
+
+//buttons
+.cta {
+    border: none;
+    outline: none;
+    color: $white;
+    width: 150px;
+    padding: 0.8rem;
+    background: linear-gradient(150deg, $lime-green, $bright-cyan);
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.cta:hover {
+    opacity: 0.7;
+}
+
+//hide
+@include max-width(laptop) {
+    .hide-for-mobile {
+        display: none;
+    }
+}
+
+@include min-width(laptop) {
+    .hide-for-laptop {
+        display: none;
+    }
+}

@@ -1,0 +1,105 @@
+.article {
+    padding-top: 5rem;
+    background: $very-light-gray;
+
+   
+
+    &__container {
+        
+        @include min-width(laptop) {
+            width: 90%;
+            margin: 0 auto;
+            text-align: left;   
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__main {
+        margin-bottom: 2.5rem;
+
+        h2 {
+            color: hsl(227, 5%, 33%);
+            font-weight: 400;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+    }
+
+    &__articles {
+        width: 90%;
+        margin: 0 auto;
+
+        @include min-width(laptop) {
+            width: 100%;
+            display: flex;
+        }
+
+        > .main {
+            background: #FFF;
+            margin-bottom: 1rem;
+            padding-bottom: 1.25rem;
+            border-radius: 5px;
+            display: block;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 300ms ease-in-out;
+
+            &:hover {
+                transform: scale(105%);
+            }
+
+            @include min-width(laptop) {
+                flex-basis: 25%;
+                
+            }
+            &:nth-child(2) {
+                @include min-width(laptop) {
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+            &:nth-child(3) {
+                @include min-width(laptop) {
+                    margin-right: 1rem;
+                }    
+            }
+        
+
+            .article__image {
+                
+                
+                
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                    object-fit: cover;
+
+                    @include min-width(laptop) {
+                        width: 100%;
+                        height: 240px;
+                    }
+                }
+            }
+
+            .article-content {
+                width: 90%;
+                margin: 0 auto;
+                color: $grayish-blue;
+
+                > .article-author {
+                    font-size: 0.7rem;
+                    padding-left: 0 !important;
+                }
+
+                > .article-title {
+                    padding-left: 0.8rem;
+                    color: hsl(227, 5%, 33%);
+                }
+
+                p {
+                    padding-left: 0.8rem;
+                }
+            }
+        }
+    }
+}

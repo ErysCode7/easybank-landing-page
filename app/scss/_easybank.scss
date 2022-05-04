@@ -1,0 +1,86 @@
+.easybank {
+    background: $light-grayish-blue;
+    width: 100%;
+
+    &__container {
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+
+        @include min-width(laptop) {
+            width: 90%;
+            margin: 0 auto;
+            text-align: left;   
+            padding-bottom: 5rem;
+        }
+    }
+
+
+    &__main {
+        margin-bottom: 2.2rem;
+
+        @include min-width(laptop) {
+            margin-bottom: 4rem;
+            width: 46%;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            width: 73%;
+            margin: 0 auto;
+            color: hsl(227, 5%, 33%);
+
+            @include min-width(laptop) {
+                width: auto;
+            }
+        }
+
+        p {
+            line-height: 1.3;
+            color: $grayish-blue;
+        }
+    }
+
+    &__features {
+        width: 90%;
+        margin: 0 auto;
+      
+
+        @include min-width(laptop) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        > .easybank__features-items {
+            
+            @include min-width(laptop) {
+                flex: 1;
+                text-align: left;
+                padding: 0 1rem;
+            }
+
+
+            > .easybank-image {
+                margin-bottom: 1rem;
+
+                img {
+                    
+                }
+            }
+
+            > .easybank-content {
+
+                h3 {
+                    color: hsl(227, 5%, 33%);
+                }
+
+                p {
+                    color: $grayish-blue;
+                }
+            }
+        }
+    }
+}

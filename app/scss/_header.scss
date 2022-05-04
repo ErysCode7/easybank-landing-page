@@ -1,0 +1,245 @@
+@import "./globals/colors";
+.header {
+    background: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    
+    &__container {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include min-width(laptop) {
+          width: 85%;
+          margin: 0 auto;
+        }
+    }
+
+    &__logo {
+        padding-left: 2rem;
+    }
+
+
+    .nav__background {
+      position: fixed;
+      background: linear-gradient($dark-blue, transparent);
+      height: 100vh;
+      width: 100%;
+      top: 70px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      z-index: -99999;
+    }  
+
+    &__nav {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        width: 80%;
+        background: $white;
+        margin: 0 auto;
+        transform: scale(1, 0);
+        transition: transform 1s ease;
+        transform-origin: top;
+        z-index: 99999;
+        opacity: 0;
+      
+        
+
+        &.show {    
+          transform: scale(1, 1);
+          opacity: 1;
+          top: 90px;
+        }
+
+        @include min-width(laptop) {     
+            transform: scale(1, 1);
+            opacity: 1;
+            transition: none;
+            animation: none;
+            position: static;
+            background: none;
+            
+  
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @include min-width(laptop) {
+              flex-direction: row;
+          }
+
+          > li {
+              padding: 1rem;
+
+              @include min-width(laptop) {
+                padding: 0 1rem;
+              }
+
+              > a { 
+                color: $grayish-blue;
+               
+                @include min-width(laptop) {
+                  line-height: 66px;
+                }
+              }
+
+              @include min-width(laptop) {
+                a::after {
+                  content: "";
+                  width: 100%;
+                  height: 4px;
+                  display: block;
+                  margin: 0 auto;
+                  transform: scale(0, 1);
+                  transition: transform 300ms ease;
+                  transform-origin: center;
+                  background: linear-gradient(150deg, $lime-green, $bright-cyan);
+                }
+  
+                a:hover::after {
+                  transform: scale(1, 1);
+                }
+              }
+          }
+        }
+    }
+
+    &__hamburger {
+        width: 80px;
+        cursor: pointer;
+       
+                
+        > .header__span {
+            display: block;
+            height: 8px;
+            width: 50%;
+            background: #111;
+            border-radius: 9px;
+            transition: all .3s;
+            position: relative;
+            height: 4px;
+            width: 23px;
+            margin: 3px 0;
+        }
+
+
+        &.active span:nth-child(1) {
+            animation: ease .7s top forwards;
+        }
+          
+        &.not-active span:nth-child(1) {
+            animation: ease .7s top-2 forwards;
+        }
+          
+        &.active span:nth-child(2) {
+            animation: ease .7s scaled forwards;
+        }
+          
+        &.not-active span:nth-child(2) {
+            animation: ease .7s scaled-2 forwards;
+        }
+          
+        &.active span:nth-child(3) {
+            animation: ease .7s bottom forwards;
+        }
+          
+        &.not-active span:nth-child(3) {
+            animation: ease .7s bottom-2 forwards;
+        }
+
+        //animated hamburger menu to x
+        @keyframes top {
+            0% {
+                top: 0;
+                transform: rotate(0);
+            }
+            50% {
+                top: 7.1px;
+                transform: rotate(0);
+            }
+            100% {
+                top: 7.1px;
+                transform: rotate(45deg);
+            }
+        }
+          
+        @keyframes top-2 {
+            0% {
+              top: 7.1px;
+              transform: rotate(45deg);
+            }
+            50% {
+              top: 7.1px;
+              transform: rotate(0deg);
+            }
+            100% {
+              top: 0;
+              transform: rotate(0deg);
+            }
+        }
+          
+        @keyframes bottom {
+            0% {
+              bottom: 0;
+              transform: rotate(0);
+            }
+            50% {
+              bottom: 7.1px;
+              transform: rotate(0);
+            }
+            100% {
+              bottom: 7.1px;
+              transform: rotate(135deg);
+            }
+        }
+          
+        @keyframes bottom-2 {
+            0% {
+              bottom: 7.1px;
+              transform: rotate(135deg);
+            }
+            50% {
+              bottom: 7.1px;
+              transform: rotate(0);
+            }
+            100% {
+              bottom: 0;
+              transform: rotate(0);
+            }
+        }
+          
+        @keyframes scaled {
+            50% {
+              transform: scale(0);
+            }
+            100% {
+              transform: scale(0);
+            }
+        }
+          
+        @keyframes scaled-2 {
+            0% {
+              transform: scale(0);
+            }
+            50% {
+              transform: scale(0);
+            }
+            100% {
+              transform: scale(1);
+            }
+        }
+    }
+}
