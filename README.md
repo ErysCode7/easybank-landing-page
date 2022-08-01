@@ -1,6 +1,6 @@
 # Frontend Mentor - Easybank landing page solution
 
-This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/ErysCode7/easybank-landing-page](https://github.com/ErysCode7/easybank-landing-page)
-- Live Site URL: [https://eryscode7.github.io/easybank-landing-page//](https://eryscode7.github.io/easybank-landing-page/)
+- Live Site URL: [https://eryscode7.github.io/easybank-landing-page/](https://eryscode7.github.io/easybank-landing-page/)
 
 ## My process
 
@@ -46,6 +46,6 @@ Users should be able to:
 ## Author
 
 - Facebook - [Erys Mozo](https://web.facebook.com/erys.mozo/)
-- Instagram - [_erysmozo](https://www.instagram.com/_erysmozo/)
+- Instagram - [\_erysmozo](https://www.instagram.com/_erysmozo/)
 - Frontend Mentor - [ErysCode7](https://www.frontendmentor.io/profile/ErysCode7)
 - LinkedIn - [Erys Mozo](https://www.linkedin.com/in/erys-mozo-280190230/)
